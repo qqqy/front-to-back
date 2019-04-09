@@ -1,6 +1,6 @@
-#FRONT TO BACK#
+# FRONT TO BACK 
 
-###SETUP###
+### SETUP
 
 - Fork the repo
 - Clone the repo
@@ -16,7 +16,7 @@
 
 - In App.js, import axios.
 
-###OBJECTIVE###
+### OBJECTIVE
    In your browser, open your console and click the "Check Solution" button. The console will name three of the properties on state, and their current value. Each of these properties has a corresponding controller method: basicFunction for basic, queryFunction for query, and paramFunction for param. For each property:
 
    - Create an endpoint in server.js, and pass-in the correct function
@@ -29,6 +29,6 @@ Start with the "basic" property. Test by refreshing your browser, then clicking 
 
 **REMEMBER:** You can reference previous projects or search chrome for proper syntax. 
 
-###STRETCH OBJECTIVE###
+### STRETCH OBJECTIVE
     The controller has a method called "sort" that can handle any of the endpoints. This allows you to combine the query endpoint and the param endpoint.
 
