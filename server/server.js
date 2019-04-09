@@ -5,9 +5,9 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/test' , (req, res) => res.status(200).send("Server Working!"));
+// ----- ADD ENDPOINTS BELOW ----- \\
 
-
+// ----- ADD ENDPOINTS ABOVE -----\\
 
 app.listen(port, () => {
   console.log("Now listening on port " + port)
