@@ -1,21 +1,3 @@
-// module.exports = {
-//   basicFunc(req , res){
-//     if(req.query.key){
-//       this.query(req, res);
-//       return null;
-//     }
-//     return res.status(200).send("Basic is now finished!")
-//   },
-
-//   queryFunc(req , res){
-//     return res.status(200).send("Query is now finished!")
-//   },
-
-//   paramFunc(req , res){
-//     return res.status(200).send("Param is now finished!")
-//   }
-// }
-
 function basicFunction(req, res){
   res.status(200).send("Basic Completed!")
 }
@@ -36,6 +18,10 @@ function paramFunction(req, res){
   }
 }
 
+function test(){
+  console.log("Server Connected!")
+}
+
 function sort(req, res){
   if(req.params.key){
     if(req.query.key){
@@ -52,5 +38,6 @@ module.exports = {
   basicFunction,
   queryFunction,
   paramFunction,
-  sort
+  sort,
+  test
 }
