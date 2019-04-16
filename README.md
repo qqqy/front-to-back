@@ -37,7 +37,7 @@ The controller has a method called `.sort` that can handle any of the endpoints.
 
 On the endpoint: `app.post("/api/your_own_path/:key" , yourController.yourControllerFunction)`\
 In the request: `axios.post("/api/your_own_path/the_value")`\
-In the controller function: `req.params.key`\
+In the controller function: `req.params.key`
 
 The example above would create a key/value pair in the req.params object. The key would be `key` and the value would be `"the_value"`. In the example above, the key would always be `key`, but we can change the value in the request:
 
@@ -47,21 +47,21 @@ If `axios.post("/api/your_own_path")`, because we haven't defined a value, the r
 
 **Remember:** In the controller function, the values of both parameters and queries will always be strings.\
 **Remember:** Both parameters and queries can be used in all request types, including `post`, `get`, `put`, and `delete`.\
-**Remember:** You don't have to write your value directly into the string. You can concatenate it onto the end, or insert it using `${value}` in a backticks string.\
+**Remember:** You don't have to write your value directly into the string. You can concatenate it onto the end, or insert it using `${value}` in a backticks string.
 
 #### How to Make a Query
 
-On the endpoint: `app.post("/api/your_own_path" , yourController.yourControllerFunction)`. The endpoint doesn't require any special preparation.\\
+On the endpoint: `app.post("/api/your_own_path" , yourController.yourControllerFunction)`. The endpoint doesn't require any special preparation.\
 In the request: `axios.post("/api/your_own_path?key=the_value")`\
-In the controller function: `req.query.key`\
+In the controller function: `req.query.key`
 
 The example above would create a key/value pair in the req.query object. The key would be `key` and the value would be `"the_value"`. In the example above, the key would be `key`, but we can change both the key and the value in the request:
 
 If `axios.post("/api/your_own_path?different_key=different_value")`, the key would be `different_key` and the value would be `"different_value"`. In the controller function, we would have to access it using `req.query.different_key`. Likewise,\
 If `axios.post("/api/your_own_path?id=5")`, the would be a *string* of 5, *not* the number 5, and you would access it using `req.query.id`. And unlike a parameter,\
-If `axios.post("/api/your_own_path")`, it would still activate the endpoint, just without any key/value pairs in `req.query`. This can be a double-edged sword, so if you plan to use queries, make sure the endpoint can recognize them, but does not *require* them.\
+If `axios.post("/api/your_own_path")`, it would still activate the endpoint, just without any key/value pairs in `req.query`. This can be a double-edged sword, so if you plan to use queries, make sure the endpoint can recognize them, but does not *require* them.
 
 **Remember:** In the controller function, the values of both parameters and queries will always be strings.\
 **Remember:** Both parameters and queries can be used in all request types, including `post`, `get`, `put`, and `delete`.\
-**Remember:** You don't have to write your value directly into the string. You can concatenate it onto the end, or insert it using `${value}` in a backticks string.\
+**Remember:** You don't have to write your value directly into the string. You can concatenate it onto the end, or insert it using `${value}` in a backticks string.
 
